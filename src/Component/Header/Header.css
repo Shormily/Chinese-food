@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    text-align: center;
+    background-color:rgb(42, 47, 117);
+    
+    
+    padding: 20px;
+}
+.navlink{
+    display: flex;
+    justify-content: center;
+
+   
+    
+    
+}
+.link{
+    
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: large;
+    padding: 10px;
+    font-weight: 545;
+    color: rgb(244, 255, 244);
+    font-family: 'Fredoka', sans-serif;
+    
+}
+
+.link:hover{
+    
+    transform: 5s;
+    color: rgb(243, 211, 130);
+    
+}
