@@ -1,0 +1,38 @@
+.forem{
+    margin-left: 10%;
+    margin-right: 20%;
+    
+}
+
+.color{
+    background-color: rgb(114, 112, 240);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+.mx{
+    margin-left: 34%;
+}
+
+/* .review{
+    width: 100%;
+    height: 300px;
+    background-image:url(../Image/img16.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    padding: 4.37rem 0;
+} */
+
+.text-color{
+    color: rgb(37, 37, 104);
+}
+
+.left{
+    width: 55%;
+    margin-left: 20%;  
+}
+.minimum{
+    margin-left: 25%;
+}
+ 

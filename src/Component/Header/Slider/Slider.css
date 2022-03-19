@@ -16,3 +16,8 @@
     font-family: 'Sansita Swashed', cursive;
 } */
 
+.bg{
+    background-color: rgb(37, 37, 104);
+    color: white;
+    padding-top: 20px;
+}
