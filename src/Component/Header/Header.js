@@ -1,11 +1,14 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import {  Navbar,Container,Nav } from 'react-bootstrap';
 // import useFirebase from '../Hook/useFirebase';
 import { NavLink } from 'react-router-dom';
 import './Header.css'
 import useAuth from './Hook/useAuth';
-import { BsBoxArrowRight} from "react-icons/bs";
+// import { BsBoxArrowRight} from "react-icons/bs";
 import 'animate.css';
+// import { IoFastFoodOutline} from "react-icons/io";
+import { IoFastFoodOutline } from "react-icons/io5";
+import { IoLogInSharp } from "react-icons/io5";
 
 
 const Header = () => {
@@ -13,31 +16,81 @@ const Header = () => {
     return (
         <div>
            
-<div  className='navbar col-lg-12 col-md-12 col-sm-12 animate__animated animate__fadeInLeft  '>
 
-        <div  className='navlink center  '>
-         
-     
-        <NavLink className="link " to="/">Home </NavLink>
-        <NavLink className="link" to="/aboutus">About US</NavLink>
-        <NavLink className="link" to="/service">Service</NavLink>
-        <NavLink className="link" to="/contact">Contact</NavLink>
-        <NavLink className="link" to="/signup">SignUp <BsBoxArrowRight/></NavLink>
-       
-      
-        </div>
-        <div >
-           {/* <span className='text-light'>{user.displayName}</span> */}
-            {user?.email &&
-        <Button variant="outline-danger bg- " className='mt-2 mx-2' size="sm" onClick={logout}><span className='text-light'>SignOut {user.displayName} {<img src="https://lh3.googleusercontent.com/a-/AOh14GigCCcrTCUqWsnTgrDedxiv6A6zS9GQnTsnBvzs8Q=s96-c" class="imge" alt="..."/>}</span></Button>
-       
-        }
-       
+    <div>
         
-        
-        </div>
+    <Navbar className="nav-bar shadow  p-3 animate__animated animate__fadeInRight " fixed="top" expand="lg">
+        <Container>
+          <Navbar.Brand as={NavLink} to="/">
+            <h2 className='text-warning  font animate__animated  animate__fadeInRight'><IoFastFoodOutline className='icon animate__animated animate__fadeInLeftBig text-danger'/> Beef USA Resturent</h2>
+          </Navbar.Brand >
+          <Navbar.Toggle aria-controls="basic-navbar-nav " className='text-light' />
+          <Navbar.Collapse id="basic-navbar-nav" className='text-light' >
+            <Nav className="ms-auto d-flex align-items-center">
+              <Nav.Link
+            
+                as={NavLink}
+                className="nav-link animate__animated animate__fadeInUp text-light"
+                to="/"
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                className="nav-link animate__animated animate__fadeInUp text-light"
+                to="/service"
+              >
+                Service
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                className="nav-link animate__animated animate__fadeInBottomLeft text-light"
+                to="/aboutus"
+              >
+                About
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                className="nav-link animate__animated animate__fadeInBottomLeft text-light"
+                to="/contact  "
+              >
+                Contact
+              </Nav.Link>
+              {!user?.email && (
+                <Nav.Link
+                as={NavLink}
+                className="nav-link animate__animated animate__fadeInDownBig text-light"
+                to="/signup  "
+              >
+              SignIn <IoLogInSharp/>
+              </Nav.Link>
+              )}
+              
+
+              {user?.email && (
+                
+                 <Nav.Link
+                 onClick={logout}
+                
+                 className="nav-link animate__animated animate__fadeInDownBig text-light"
+                 to="/signup  "
+                 as={NavLink}
+               >
+               LogOut<IoLogInSharp/><span>
+                {user?.photoURL ? (
+                  <img className="user-img" src={user.photoURL} alt="" />
+                ) : (
+                  <small className="text-light ms-3">{user?.displayName}</small>
+                )}
+              </span>
+               </Nav.Link>
+              )}
+              
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
-    
         </div>
         
     );

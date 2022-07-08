@@ -10,7 +10,6 @@ import LogIn from './Component/Header/LogIn/LogIn';
 import SignUp from './Component/Header/SignUp/SignUp';
 import AuthProvider from './Component/Header/Context/AuthProvider';
 import PrivateRoute from './Component/Header/PrivateRoute/PrivateRoute';
-// import PrivateRoute from './Component/Header/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -19,19 +18,14 @@ function App() {
     <Header/>
      <Routes>
     <Route path="/" element={<Home/>}/>
-     <Route path="/service" element={<Service/>}/>
-    <Route path="/contact" element={
-    <Contact/>
+     <Route path="/service" element={<PrivateRoute><Service/></PrivateRoute>}/>
+    <Route path="/contact" element={<PrivateRoute><Contact/></PrivateRoute>
+    
     }/>
-    <Route path="/aboutus" element={<Aboutus/>}/> 
+    <Route path="/aboutus" element={<PrivateRoute><Aboutus/></PrivateRoute>}/> 
     <Route path="/login" element={<LogIn/>}/> 
     <Route path="/signup" element={  <SignUp/>}/> 
-    <Route
-          path="/privateroute"
-          element={
-          <PrivateRoute/>
-          }
-        />
+    
     </Routes>  
     <Footer></Footer>
     </AuthProvider>

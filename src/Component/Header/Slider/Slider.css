@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
 
 .display{
     display: flex;
@@ -20,4 +25,35 @@
     background-color: rgb(37, 37, 104);
     color: white;
     padding-top: 20px;
+}
+.countUp{
+    background-color: rgb(37, 37, 104);
+    color: white;
+    font-size: 50px;
+    /* font-family: 'Beau Rivage', cursive; */
+    /* font-family: 'Sansita Swashed', cursive; */
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+}
+.slide-pra{
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+    
+}
+.about-pragraph{
+    font-size: 15px;
+}
+.background-color-slides{
+
+    background-color: rgb(37, 37, 104);
+    color: white;
+    padding-top: 18px;
+    
+    /* font-family: 'Beau Rivage', cursive; */
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    /* font-family: 'Sansita Swashed', cursive; */
+    
+    
+
 }

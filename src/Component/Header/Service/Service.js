@@ -16,7 +16,7 @@ const Service = () => {
             <div className="row">
                 {
                     foods.map( food => (
-                        <FoodCart food={food}></FoodCart>
+                        <FoodCart kry={food} food={food}></FoodCart>
                     ))
                 }
             </div>

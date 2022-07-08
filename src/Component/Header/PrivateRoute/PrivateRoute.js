@@ -4,11 +4,11 @@ import useAuth from '../Hook/useAuth';
 
 const PrivateRoute = ({ children,...rest }) => {
     const {user} = useAuth();
-    const location =useLocation ;
+    const location = useLocation() ;
     if(user.email){
         return children
     }
-    return user.email ? children : <Navigate to="/contact" state={{ from: location }} />;
+    return <Navigate to="/signup" state={{ from: location }} />;
 };
 
 export default PrivateRoute;

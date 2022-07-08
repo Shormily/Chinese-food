@@ -8,15 +8,17 @@ import { Form, Button } from 'react-bootstrap';
 
 const Contact = () => {
   return (
-    <div >
-      <h1>Contact US</h1>
+    <div className='mt-5 mb-5' >
+      
 
       <div className='row'>
+      <h1 className=' mt-5'>Contact US</h1>
        <div className='col-lg-6 col-md-12 col-sm-12'>
-       <img className=' left  animate__animated animate__lightSpeedInLeft ' src={img28} alt="" />
+       <img className=' left  animate__animated animate__lightSpeedInLeft mt-5 ' src={img28} alt="" />
        </div>
        <div className='col-lg-6'>
-       <Form className='color my-2 col-md-6 minimum  col-sm-12 '>
+         
+       <Form className='color my-2 col-md-6 minimum  col-sm-12 mt-5 '>
           <Form.Group className="mb-3 text-light" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />

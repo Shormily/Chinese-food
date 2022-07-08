@@ -9,6 +9,13 @@ h1{
     
     
 }
+.about-name-part{
+    margin: 0;
+    align-items: center;
+}
+.review-buttom{
+    margin-bottom: 15%;
+}
 
 .review-wrapper{
     /* width: 100%;

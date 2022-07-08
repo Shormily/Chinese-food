@@ -4,7 +4,9 @@
 
 }
 
-
+p{
+   cursor: pointer;
+}
 
 .from-box{
    width: 700px;
@@ -55,11 +57,42 @@
    color: #fff;
 }
 
+
 .first{
    margin-top: 20px;
 }
 
 .login-link{
    text-decoration: none;
-   margin-left: 30%;
+   
+}
+
+/* ====== SignUp ==== */
+.signup-page{
+   margin: 0;
+   align-items: center;
+}
+/* ========= input part ========= */
+.log-in-button{
+   background-color: rgb(17, 16, 101);
+   border: none;
+   border-radius: 5px;
+   padding: 8px;
+   color: #fff;
+   font-family: 'M PLUS 1', sans-serif;
+   font-weight: 900;
+}
+.Sign-in-button{
+   border: none;
+   border-radius: 5px;
+   padding: 8px;
+   color:black;
+   font-family: 'M PLUS 1', sans-serif;
+   font-weight: 900;
+}
+.decoration{
+   text-decoration: none;
+   color: rgb(9, 68, 6);
+   font-family: 'M PLUS 1', sans-serif;
+   font-weight: 900;
 }
