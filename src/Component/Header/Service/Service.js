@@ -4,8 +4,9 @@ import './Service.css'
 
 const Service = () => {
     const [foods,setFoods] = useState([]);
+    
     useEffect(() =>{
-        fetch('./foods.JSON')
+        fetch('http://localhost:5000/users')
         .then(res => res.json())
         .then(data => setFoods(data));
 
@@ -16,7 +17,9 @@ const Service = () => {
             <div className="row">
                 {
                     foods.map( food => (
-                        <FoodCart kry={food} food={food}></FoodCart>
+                        <FoodCart key={food.id} food={food}
+                        setFoods={setFoods}
+                        ></FoodCart>
                     ))
                 }
             </div>

@@ -1,12 +1,31 @@
 import React from "react";
 import "./FoodCart.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { NavLink } from 'react-router-dom';
-import { Button } from "react-bootstrap";
 import { MdStarRate} from "react-icons/md";
-const FoodCart = (props) => {
-  console.log(props.food);
-  const { name, img, price} = props.food;
+
+const FoodCart = ({food,setFoods}) => {
+  
+  const { name, img, price} = food;
+  
+  const handleDeleteUsers = id =>{
+    
+     const proceed = window.confirm('Are you sure, you want to delete?');
+     if(proceed){
+       const url = `http://localhost:5000/users${id}`;
+     fetch(url,{
+       method:'DELETE'
+     })
+     .then(res => res.json())
+     .then(data =>{
+       if(data.deletedCount >0){
+         alert('deleted successfully');
+         setFoods(users => users.filter(users =>users._id !== id));
+         
+       }
+     })
+     }
+     
+   }
 
   return (
     <div className="col-lg-3 col-md-6 col-sm-12 mb-4 "data-aos="fade-down"
@@ -30,8 +49,9 @@ const FoodCart = (props) => {
             < MdStarRate/></div>
           </div>
         </div>
-        <div className="btn">
-        <NavLink className=" text-danger algin " to="/signup"><Button variant="danger">Buy Now</Button> </NavLink>
+        <div className="btnservice p-3">
+        <button className='btnsdesigns px-4 pragraph-weight text-light  '>Buy Now</button> 
+          <button className='btnsdesigns px-4 pragraph-weight text-light  ' onClick={() => handleDeleteUsers(food._id)}>Delete</button> 
         </div>
       </div>
       </div>

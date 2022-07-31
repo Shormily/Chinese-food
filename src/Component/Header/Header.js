@@ -35,6 +35,16 @@ const Header = () => {
               >
                 Home
               </Nav.Link>
+              
+              
+              <Nav.Link
+            
+                as={NavLink}
+                className="nav-link animate__animated animate__fadeInUp text-light"
+                to="/addService"
+              >
+                AddService
+              </Nav.Link>
               <Nav.Link
                 as={NavLink}
                 className="nav-link animate__animated animate__fadeInUp text-light"
